@@ -5,11 +5,7 @@
             <a href="#">添加类别</a>
         </div>
         <ul>
-            <?php foreach ($category_list as $cat):?>
 
-                <li><?php echo $cat->category_name; ?></li>
-
-            <?php endforeach;?>
         </ul>
 
 
