@@ -1,0 +1,57 @@
+.acy-wrap {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+}
+
+.acy-ad-top {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #efefef;
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.acy-login-wrap {
+    width: 300px;
+    min-height: 250px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin:-200px 0 0 -150px;
+    background: #efefef;
+    border:2px solid #cdcdcd;
+    padding: 15px;
+}
+
+.acy-footer {
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    text-align: center;
+    line-height: 30px;
+    border-top: 1px solid #9b9b9b;
+}
+
+
+.acy-ad-menu {
+    position: absolute;
+    top:40px;
+    bottom:30px;
+    left:0;
+    width: 200px;
+    background: #eeeeee;
+    border-right:1px solid #cdcdcd;
+}
+
+.acy-ad-content {
+    position: absolute;
+    left:200px;
+    right:0;
+    top:40px;
+    bottom: 30px;
+}
