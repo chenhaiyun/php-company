@@ -26,6 +26,17 @@ class Category extends COM_Controller{
 
     }
 
+    public function remove_category() {
+
+        $id = $this->uri->segment(4);
+
+
+        $this->category->remove_category($id);
+
+        header('Location: '.site_url('admin/category/list_category'));
+
+    }
+
     public function add_category() {
 
         $data['category_list'] = $this->category->list_category();
@@ -41,15 +52,19 @@ class Category extends COM_Controller{
 
             $parent_id = $this->input->post('parent_id');
 
-            $parent_cat = $this->category->get_category_by_id($parent_id);
+            echo "parentID:".$parent_id;
 
-            if($parent_cat) {
+            if($parent_id > 0) {
+
+                $parent_cat = $this->category->get_category_by_id($parent_id);
+
                 $category = array(
-                    'parent_id' => $parent_cat.id,
+                    'parent_id' => $parent_id,
                     'category_name' => $this->input->post('category_name'),
                     'content' => $this->input->post('content'),
                     'rank' => $parent_cat->rank + 1
                 );
+
             } else {
                 $category = array(
                     'parent_id' => 0,
@@ -60,15 +75,12 @@ class Category extends COM_Controller{
             }
 
 
-
             //var_dump($admin_user);
             $res = $this->category->add_category($category);
 
             if($res) {
                 header('Location: '.site_url('admin/category/list_category'));
             }
-
-
 
 
         }

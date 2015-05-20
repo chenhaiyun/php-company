@@ -10,7 +10,9 @@ class Category_model extends CI_Model{
 
     public function list_category() {
 
+        $this->db->order_by('path','asc');
         $query = $this->db->get('category');
+
         if($query->num_rows() > 0)
         {
             return $query->result_array();
@@ -24,13 +26,19 @@ class Category_model extends CI_Model{
 
         $this->db->select('*');
         $this->db->from('category');
-        $this->db->where('parent_id', $id);
+        $this->db->where('id', $id);
 
         $query = $this->db->get();
 
         $row = $query->row();
 
         return $row;
+
+    }
+
+    public function remove_category($id) {
+
+        $this->db->delete('category', array('id' => $id));
 
     }
 

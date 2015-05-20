@@ -11,7 +11,7 @@
                     <select name="parent_id">
                         <option value="0">顶级类别</option>
                         <?php foreach((array) $category_list as $key => $c){?>
-                            <option value="<?php echo $c['parent_id'] ?>">
+                            <option value="<?php echo $c['id'] ?>">
                                     <?php echo '┣';
                                     if( $c['rank'] > 0 )
                                     {

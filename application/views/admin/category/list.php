@@ -8,7 +8,16 @@
 
         </ul>
 
-        <table border="1">
+        <table border="1" width="80%">
+
+                <tr>
+
+                    <th>类别名称</th>
+                    <th>类别描述</th>
+
+                    <td>操作</td>
+
+                </tr>
 
             <?php foreach((array) $category_list as $key => $c){?>
 
@@ -27,7 +36,7 @@
                         ?>
                     </td>
                     <td><?php echo $c['content'];?></td>
-                    <td><a id="add1" href="#add">修改</a>&nbsp;|&nbsp;<a href="#">删除</a></td>
+                    <td><a id="add1" href="#add">修改</a>&nbsp;|&nbsp;<a href="<?php echo site_url('admin/category/remove_category').'/'.$c['id'] ?>">删除</a></td>
                 </tr>
             <?php }unset ($c);?>
 
