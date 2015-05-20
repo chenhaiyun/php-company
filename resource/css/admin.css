@@ -46,6 +46,15 @@
     width: 200px;
     background: #eeeeee;
     border-right:1px solid #cdcdcd;
+    padding:15px;
+}
+
+.acy-ad-menu .main-menu {
+    font-weight: bold;
+}
+
+.acy-ad-menu .sub-menu {
+    padding: 2px 0 2px 10px;
 }
 
 .acy-ad-content {
