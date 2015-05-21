@@ -1,5 +1,5 @@
 <div class="acy-ad-content">
-    <div class="acy-ad-category">
+    <div class="acy-ad-product">
         <div>产品列表</div>
         <div>
             <a href="<?php echo site_url('admin/product/add_product') ?>">添加产品</a>
