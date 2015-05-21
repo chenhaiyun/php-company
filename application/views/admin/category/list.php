@@ -35,7 +35,7 @@
                         ?>
                     </td>
                     <td><?php echo $c['content'];?></td>
-                    <td><a id="add1" href="#add">修改</a>&nbsp;|&nbsp;<a href="<?php echo site_url('admin/category/remove_category').'/'.$c['id'] ?>">删除</a></td>
+                    <td><a>修改</a>&nbsp;|&nbsp;<a href="<?php echo site_url('admin/category/remove_category').'/'.$c['id'] ?>">删除</a></td>
                 </tr>
             <?php }unset ($c);?>
 

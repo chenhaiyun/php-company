@@ -6,6 +6,6 @@
         <li class="sub-menu"><a href="#">普通用户</a> </li>
         <li class="main-menu">数据管理</li>
         <li class="sub-menu"><a href="<?php echo site_url('admin/category/list_category') ?>">类别管理</a></li>
-        <li class="sub-menu"><a href="#">产品管理</a></li>
+        <li class="sub-menu"><a href="<?php echo site_url('admin/product/list_product') ?>">产品管理</a></li>
     </ul>
 </div>
