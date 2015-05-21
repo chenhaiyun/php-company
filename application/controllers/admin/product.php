@@ -48,10 +48,6 @@ class Product extends COM_Controller{
             'page_link'   => $this->pagination->create_links(),
         );
 
-        //$data['category_list'] = $this->category->list_category();
-
-        //$data['product_list'] = $this->product->list_product($page);
-
         $this->load->view('admin/inc/header.php', $data);
         $this->load->view('admin/inc/top.php');
         $this->load->view('admin/inc/menus.php');

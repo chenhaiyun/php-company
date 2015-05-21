@@ -13,13 +13,10 @@ class Product_model extends CI_Model{
         $this->db->select('product.id, product_name, product_image, product_desc, category.category_name');
         $this->db->from('product');
         $this->db->join('category', 'category.id = product.product_category');
+        $this->db->order_by($order_by);
         $this->db->limit($per_page, $offset);
-        //$this->db->limit($page['offset'], $page['per_page']);
 
         $query = $this->db->get();
-
-        //$this->db->order_by('id','desc');
-        //$query = $this->db->get('product');
 
         if($query->num_rows() > 0)
         {
