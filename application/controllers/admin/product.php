@@ -60,7 +60,6 @@ class Product extends COM_Controller{
     public function add_product() {
 
 
-
         //产品图片上传
         $config['upload_path'] = './uploads/products/';
         $config['allowed_types'] = 'gif|jpg|png';
