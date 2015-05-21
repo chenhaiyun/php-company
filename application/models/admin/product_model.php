@@ -8,14 +8,25 @@
 
 class Product_model extends CI_Model{
 
-    public function list_product() {
+    public function list_product($offset, $per_page, $order_by) {
 
-        $this->db->order_by('id','desc');
-        $query = $this->db->get('product');
+        $this->db->select('product.id, product_name, product_image, product_desc, category.category_name');
+        $this->db->from('product');
+        $this->db->join('category', 'category.id = product.product_category');
+        $this->db->limit($per_page, $offset);
+        //$this->db->limit($page['offset'], $page['per_page']);
+
+        $query = $this->db->get();
+
+        //$this->db->order_by('id','desc');
+        //$query = $this->db->get('product');
 
         if($query->num_rows() > 0)
         {
-            return $query->result();
+            return array (
+                'total' => $this->db->count_all('product'),
+                'list' => $query->result(),
+            );
         }
         return null;
 

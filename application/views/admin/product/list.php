@@ -12,6 +12,8 @@
 
                 <tr>
 
+                    <td>产品ID</td>
+
                     <th>产品图片</th>
 
                     <th>产品类别</th>
@@ -26,11 +28,16 @@
 
             <?php foreach ($product_list as $product):?>
                 <tr>
+
+                    <td>
+                        <?=$product->id ?>
+                    </td>
+
                     <td>
                         <img width="50" src="<?php echo base_url().'uploads/products/'.$product->product_image ?>">
                     </td>
                     <td>
-                        <?=$product->product_category ?>
+                        <?=$product->category_name ?>
                     </td>
                     <td>
                         <?=$product->product_name ?>
@@ -42,6 +49,8 @@
                 </tr>
             <?php endforeach;?>
         </table>
+
+        <?=$page_link ?>
 
     </div>
 </div>

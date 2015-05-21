@@ -19,9 +19,38 @@ class Product extends COM_Controller{
 
     public function list_product() {
 
+
+        //分页
+        $config= array();
+        $config['per_page'] = 4; //每页显示的数据数
+        $current_page       = intval($this->input->get_post('per_page',true)); //获取当前分页页码数
+        //page还原
+        if(0 == $current_page)
+        {
+            $current_page = 1;
+        }
+        $offset = ($current_page - 1 ) * $config['per_page']; //设置偏移量 限定 数据查询 起始位置（从 $offset 条开始）
+        $result  = $this->product->list_product($offset,$config['per_page'],$order='id desc');
+        $config['base_url']           = site_url('admin/product/list_product');
+        $config['total_rows']         = $result['total'];
+        $config['num_links'] = 3;
+        $config['use_page_numbers']   = TRUE;
+        $config['page_query_string']  = TRUE;
+
+        $this->load->library('pagination');//加载ci pagination类
+
+        $this->pagination->initialize($config);
+        $data = array(
+            'product_list'  => $result['list'],
+            'total'   => $result['total'],
+            'current_page' => $current_page,
+            'per_page'  => $config['per_page'],
+            'page_link'   => $this->pagination->create_links(),
+        );
+
         //$data['category_list'] = $this->category->list_category();
 
-        $data['product_list'] = $this->product->list_product();
+        //$data['product_list'] = $this->product->list_product($page);
 
         $this->load->view('admin/inc/header.php', $data);
         $this->load->view('admin/inc/top.php');
