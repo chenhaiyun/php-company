@@ -34,8 +34,22 @@ class Product extends COM_Controller{
 
     public function add_product() {
 
-        $this->load->model('admin/category_model', 'category');
 
+
+        //产品图片上传
+        $config['upload_path'] = './uploads/products/';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size'] = '10000';
+        $config['max_width'] = '1024';
+        $config['max_height'] = '768';
+        $this->load->library('upload', $config);
+        $field_name = "product_image";
+        $this->upload->do_upload($field_name);
+        $up_file = $this->upload->data();
+
+
+        //获取产品数据
+        $this->load->model('admin/category_model', 'category');
         $data['category_list'] = $this->category->list_category();
 
         $this->load->view('admin/inc/header.php',$data);
@@ -50,18 +64,16 @@ class Product extends COM_Controller{
                 'product_name' => $this->input->post('product_name'),
                 'product_category' => $this->input->post('product_category'),
                 'product_desc' => $this->input->post('product_desc'),
-                'product_image' => $this->input->post('product_image')
+                'product_image' => $up_file['file_name']
             );
 
             $res = $this->product->add_product($product);
 
             if($res) {
-                header('Location: '.site_url('admin/product/list_product'));
+               header('Location: '.site_url('admin/product/list_product'));
             }
 
         }
-
-
 
     }
 

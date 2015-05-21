@@ -3,7 +3,8 @@
         <div>添加产品</div>
 
         <div>
-            <form method="post" action="<?php site_url("admin/product/add_product")?>">
+
+            <form method="post" action="<?php site_url("admin/product/add_product")?>" enctype="multipart/form-data">
 
 
                 <div>产品名称：</div>

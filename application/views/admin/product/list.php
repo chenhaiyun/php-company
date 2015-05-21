@@ -27,7 +27,7 @@
             <?php foreach ($product_list as $product):?>
                 <tr>
                     <td>
-                        <?=$product->product_image ?>
+                        <img width="50" src="<?php echo base_url().'uploads/products/'.$product->product_image ?>">
                     </td>
                     <td>
                         <?=$product->product_category ?>
