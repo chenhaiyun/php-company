@@ -24,5 +24,18 @@ class Admin_model  extends CI_Model {
 
     }
 
+    public function list_admin() {
+
+        $this->db->order_by('id','asc');
+        $query = $this->db->get('admin');
+
+        if($query->num_rows() > 0)
+        {
+            return $query->result();
+        }
+
+        return null;
+    }
+
 
 }

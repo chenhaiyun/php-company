@@ -35,7 +35,6 @@ class News extends COM_Controller{
         $config['total_rows']         = $result['total'];
         $config['num_links'] = 3;
         $config['use_page_numbers']   = TRUE;
-        $config['page_query_string']  = TRUE;
 
         $this->load->library('pagination');//加载ci pagination类
 

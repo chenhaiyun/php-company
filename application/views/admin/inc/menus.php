@@ -2,7 +2,7 @@
     <ul>
         <li class="main-menu">网站配置</li>
         <li class="main-menu">用户管理</li>
-        <li class="sub-menu"><a href="<?php echo site_url('admin/list_admin') ?>">管理员</a> </li>
+        <li class="sub-menu"><a href="<?php echo site_url('admin/admin/list_admin') ?>">管理员</a> </li>
         <li class="sub-menu"><a href="#">普通用户</a> </li>
         <li class="main-menu">产品管理</li>
         <li class="sub-menu"><a href="<?php echo site_url('admin/category/list_category') ?>">分类管理</a></li>

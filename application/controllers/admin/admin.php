@@ -10,6 +10,9 @@ class Admin extends COM_Controller {
 
     public function __construct() {
         parent::__construct();
+
+        $this->load->model('admin/admin_model', 'admin');
+
     }
 
 
@@ -20,6 +23,18 @@ class Admin extends COM_Controller {
         $this->load->view('admin/inc/top.php');
         $this->load->view('admin/inc/menus.php');
         $this->load->view('admin/index.php');
+        $this->load->view('admin/inc/footer.php');
+
+    }
+
+    public function list_admin() {
+
+        $data['admin_list'] = $this->admin->list_admin();
+
+        $this->load->view('admin/inc/header.php', $data);
+        $this->load->view('admin/inc/top.php');
+        $this->load->view('admin/inc/menus.php');
+        $this->load->view('admin/admin/list.php');
         $this->load->view('admin/inc/footer.php');
 
     }
@@ -52,8 +67,6 @@ class Admin extends COM_Controller {
                 "login_name" => $login_name,
                 "password" => $password
             );
-
-            $this->load->model('admin/admin_model', 'admin');
 
             $res = $this->admin->login($login_info);
 
