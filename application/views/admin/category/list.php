@@ -20,19 +20,18 @@
                 </tr>
 
             <?php foreach((array) $category_list as $key => $c){?>
-
                 <tr>
                     <td>
-                        <?php echo '┣';
+                        <?php
                         if( $c['rank'] > 0 )
                         {
                             for( $i=1;$i<=$c['rank'];$i++ )
                             {
-                                if($i > 0 AND $i < $c['rank']) {echo '━';}
-                                if($i >= $c['rank']) {echo '━';}
+                                if($i > 0 AND $i < $c['rank']) {echo '--';}
+                                //if($i >= $c['rank']) {echo '';}
                             }
                         }
-                        echo '<span id=red>'.$c['rank'].'级</span>　'.$c['category_name'];
+                        echo $c['category_name'];
                         ?>
                     </td>
                     <td><?php echo $c['content'];?></td>

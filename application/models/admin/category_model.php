@@ -48,12 +48,35 @@ class Category_model extends CI_Model{
             'parent_id' => $category['parent_id'],
             'category_name' => $category['category_name'],
             'content' => $category['content'],
+            'path' => $category['path'],
             'rank' => $category['rank']
         );
 
         $add_res = $this->db->insert('category', $data);
+        $new_id = $this->db->insert_id();
+
+        $new_category = $this->get_category_by_id($new_id);
+
+        if($category['parent_id'] > 0) {
+
+            $new_category->path = $category['path'].",".$new_id;
+            $this->update_category($new_category);
+
+        } else {
+
+            $new_category->path = $new_id;
+            $this->update_category($new_category);
+
+        }
 
         return $add_res;
+
+    }
+
+    public function update_category($category) {
+
+        $this->db->where('id', $category->id);
+        $this->db->update('category', $category);
 
     }
 

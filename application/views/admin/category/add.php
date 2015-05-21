@@ -12,17 +12,15 @@
                         <option value="0">顶级类别</option>
                         <?php foreach((array) $category_list as $key => $c){?>
                             <option value="<?php echo $c['id'] ?>">
-                                    <?php echo '┣';
+                                    <?php
                                     if( $c['rank'] > 0 )
                                     {
                                         for( $i=1;$i<=$c['rank'];$i++ )
                                         {
                                             if($i > 0 AND $i < $c['rank']) {
-                                                echo '━';
+                                                echo '--';
                                             }
-                                            if($i >= $c['rank']) {
-                                                echo '━';
-                                            }
+                                            //if($i >= $c['rank']) { echo '━'; }
                                         }
                                     }
                                     echo $c['category_name'];

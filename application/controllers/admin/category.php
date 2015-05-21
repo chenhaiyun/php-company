@@ -52,8 +52,6 @@ class Category extends COM_Controller{
 
             $parent_id = $this->input->post('parent_id');
 
-            echo "parentID:".$parent_id;
-
             if($parent_id > 0) {
 
                 $parent_cat = $this->category->get_category_by_id($parent_id);
@@ -62,6 +60,7 @@ class Category extends COM_Controller{
                     'parent_id' => $parent_id,
                     'category_name' => $this->input->post('category_name'),
                     'content' => $this->input->post('content'),
+                    'path' => $parent_cat->path,
                     'rank' => $parent_cat->rank + 1
                 );
 
@@ -73,7 +72,6 @@ class Category extends COM_Controller{
                     'rank' => 1
                 );
             }
-
 
             //var_dump($admin_user);
             $res = $this->category->add_category($category);
