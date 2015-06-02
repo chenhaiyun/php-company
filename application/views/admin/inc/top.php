@@ -239,6 +239,8 @@
                     <li>
                         <a href="<?= site_url('admin/admin/index') ?>"><i class="fa fa-dashboard fa-fw"></i> 控制面板</a>
                     </li>
+
+                    <!--
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> 财务报表<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -249,8 +251,8 @@
                                 <a href="morris.html">Morris.js Charts</a>
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
                     </li>
+                    -->
 
                     <li>
                         <a href="#"><i class="fa fa-user fa-fw"></i> 管理员列表<span class="fa arrow"></span></a>
@@ -291,36 +293,16 @@
                         <!-- /.nav-second-level -->
                     </li>
 
+                    <!--
                     <li>
                         <a href="tables.html"><i class="fa fa-table fa-fw"></i> 表格管理</a>
                     </li>
                     <li>
                         <a href="forms.html"><i class="fa fa-edit fa-fw"></i> 表单管理</a>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 页面元素<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
-                            <li>
-                                <a href="buttons.html">Buttons</a>
-                            </li>
-                            <li>
-                                <a href="notifications.html">Notifications</a>
-                            </li>
-                            <li>
-                                <a href="typography.html">Typography</a>
-                            </li>
-                            <li>
-                                <a href="icons.html"> Icons</a>
-                            </li>
-                            <li>
-                                <a href="grid.html">Grid</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+                    -->
+
+                    <!--
                     <li>
                         <a href="#"><i class="fa fa-sitemap fa-fw"></i> 下拉列表<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -346,23 +328,11 @@
                                         <a href="#">Third Level Item</a>
                                     </li>
                                 </ul>
-                                <!-- /.nav-third-level -->
                             </li>
                         </ul>
-                        <!-- /.nav-second-level -->
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-files-o fa-fw"></i> 示例页面<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="blank.html">Blank Page</a>
-                            </li>
-                            <li>
-                                <a href="login.html">Login Page</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
+                    -->
+
                 </ul>
             </div>
             <!-- /.sidebar-collapse -->

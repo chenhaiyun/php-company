@@ -68,9 +68,6 @@ class Product extends COM_Controller{
         $config['max_height'] = '768';
         $this->load->library('upload', $config);
         $field_name = "product_image";
-        $this->upload->do_upload($field_name);
-        $up_file = $this->upload->data();
-
 
         //获取产品数据
         $this->load->model('admin/category_model', 'category');
@@ -83,6 +80,9 @@ class Product extends COM_Controller{
         $this->load->view('admin/inc/footer.php');
 
         if($this->input->post('submit')) {
+
+            $this->upload->do_upload($field_name);
+            $up_file = $this->upload->data();
 
             $product = array(
                 'product_name' => $this->input->post('product_name'),
