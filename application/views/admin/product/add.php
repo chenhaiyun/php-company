@@ -19,12 +19,12 @@
 
                                 <div class="form-group">
                                     <label>产品名称</label>
-                                    <input class="form-control" name="category_name" placeholder="请输入产品名称">
+                                    <input class="form-control" name="product_name" placeholder="请输入产品名称">
                                 </div>
 
                                 <div class="form-group">
                                     <label>产品类别</label>
-                                    <select name="parent_id">
+                                    <select name="product_category">
                                         <?php foreach((array) $category_list as $key => $c){?>
                                             <option value="<?php echo $c['id'] ?>">
                                                 <?php
@@ -44,7 +44,6 @@
                                         <?php }unset ($c);?>
                                     </select>
                                 </div>
-
 
                                 <div class="form-group">
                                     <label>产品图片</label>
