@@ -39,7 +39,7 @@
                                             {
                                                 for( $i=1;$i<=$c['rank'];$i++ )
                                                 {
-                                                    if($i > 0 AND $i < $c['rank']) {echo '--';}
+                                                    if($i > 0 AND $i < $c['rank']) {echo '---';}
                                                     //if($i >= $c['rank']) {echo '';}
                                                 }
                                             }

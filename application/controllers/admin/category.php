@@ -43,7 +43,7 @@ class Category extends COM_Controller{
 
         $this->load->view('admin/inc/header.php', $data);
         $this->load->view('admin/inc/top.php');
-        $this->load->view('admin/inc/menus.php');
+        //$this->load->view('admin/inc/menus.php');
         $this->load->view('admin/category/add.php');
         $this->load->view('admin/inc/footer.php');
 
