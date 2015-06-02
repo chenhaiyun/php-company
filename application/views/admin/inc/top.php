@@ -282,10 +282,10 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i> 新闻管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="panels-wells.html">分类管理</a>
+                                <a href="<?= site_url('admin/news_category/list_news_category') ?>">分类管理</a>
                             </li>
                             <li>
-                                <a href="panels-wells.html">新闻列表</a>
+                                <a href="<?= site_url('admin/news/list_news') ?>">新闻列表</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

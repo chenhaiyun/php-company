@@ -20,7 +20,7 @@ class News_category extends COM_Controller{
 
         $this->load->view('admin/inc/header.php', $data);
         $this->load->view('admin/inc/top.php');
-        $this->load->view('admin/inc/menus.php');
+        //$this->load->view('admin/inc/menus.php');
         $this->load->view('admin/news_category/list.php');
         $this->load->view('admin/inc/footer.php');
 
