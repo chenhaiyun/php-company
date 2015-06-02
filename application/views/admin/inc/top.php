@@ -253,7 +253,7 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 管理员列表<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-user fa-fw"></i> 管理员列表<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="<?= site_url('admin/admin/list_admin') ?>">管理员列表</a>
@@ -266,7 +266,7 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 产品管理<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-table fa-fw"></i> 产品管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="<?= site_url('admin/category/list_category') ?>">分类管理</a>
@@ -279,7 +279,7 @@
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> 新闻管理<span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-tasks fa-fw"></i> 新闻管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
                                 <a href="<?= site_url('admin/news_category/list_news_category') ?>">分类管理</a>
